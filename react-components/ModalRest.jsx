@@ -52,15 +52,16 @@ function comparePatronsToEmployees(patrons, employees){
       {
       if (json.modifiedCount === 1){
 
-        // let newArrayofObjs = [...props.rest]
+        let newArrayofObjs = [...props.rest]
      
       
-        // let newRestObj = newArrayofObjs.filter( val => val._id === newObj.restId).flat()
-        // console.log(newRestObj[0]['patrons'])
+        let newRestObj = newArrayofObjs.filter( val => val._id === newObj.restId).flat()
+        newRestObj[0].patrons.push({patId: newObj.empId})
      
-        // let remainingRests = newArrayofObjs.filter( val => val._id !== props.restinfo.id)
-   
-        // props.setRest(remainingRests)
+        let remainingRests = newArrayofObjs.filter( val => val._id !== props.restinfo.id)
+        remainingRests.push(newRestObj[0])
+        console.log(remainingRests)
+         props.setRest(remainingRests)
 
       }
       
