@@ -24,7 +24,7 @@ const ObjectId = mongodb.ObjectId;
     if (req.method === "POST") {
         let restId = req.body.restId;
         let empId = req.body.empId;
-        console.log(restId, empId);
+   
         try {
           const result = await db
           .collection("restaurants")
