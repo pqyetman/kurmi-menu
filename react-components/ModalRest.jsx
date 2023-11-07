@@ -32,6 +32,7 @@ function comparePatronsToEmployees(patrons, employees){
 
   const closeModal = () => {
     props.onHide();
+    setVal(0);
   };
 
   const addPatron = () => {
